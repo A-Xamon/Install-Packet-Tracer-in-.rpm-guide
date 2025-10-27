@@ -17,6 +17,10 @@ Alien is a program that converts between the rpm, dpkg, stampede slp, and slackw
 ```bash
 sudo alien --to-rpm CiscoPacketTracer_900_Ubuntu_64bit.deb
 ```
+Once it finished, alien creates a .rpm file in the same directory with se same name
+```
+CiscoPacketTracer_900_Ubuntu_64bit.rpm
+```
 
 ## 💿 Install Packet Tracer
 ```bash
