@@ -1,7 +1,9 @@
 
 # How to Install Packet Tracer 9.0.0 on RHEL 🖥️
-_(Tested on Rocky Linux 10)_
-
+***(Tested on Rocky Linux 10)***
+There are 2 options:
+- Automatically: Install the repo and execute de _setup.sh_ file
+- Follow the manual instruccions in the _README.md_
 ## 📂 Required Files
 - You only need the **.deb installation file** of Packet Tracer.
 
