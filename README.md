@@ -33,5 +33,7 @@ sudo dnf install ./PacketTracer-9.0-2.x86_64.rpm -y
 ```bash
 packettracer
 ```
+---
+✨ Created by [A-Xamon](https://github.com/A-Xamon)
+Tested on Rocky Linux 10 | RHEL-compatible
 
-***by A-Xamon***
