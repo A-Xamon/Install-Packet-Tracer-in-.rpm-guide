@@ -46,11 +46,12 @@ echo
 wait 2
 #Required Dependencies and Library Setup
 sudo dnf config-manager --set-enabled crb && sudo dnf install -y epel-release alien fuse3 fuse-overlayfs fuse fuse-libs mesa-libGL mesa-libGLU mesa-libEGL libglvnd-opengl qt5-qtmultimedia qt5-qtlocation qt5-qtscript qt5-qtbase qt5-qtx11extras qt5-qttools
-
+#Once it's installed all the dependencies, executes alien to convert the .deb to .rpm file
 echo -e "${yellow} Perfect, its almost finished, now, alien is working and creating the .rpm file!"
 sudo alien --to-rpm $packet_tracer_path ./
 echo
 echo
+#Now you have the .rpm file created, it installs
 echo -e "${cian} Packet Tracer is installing ..."
 sudo dnf install ./PacketTracer-9.0-2.x86_64.rpm -y
 echo
