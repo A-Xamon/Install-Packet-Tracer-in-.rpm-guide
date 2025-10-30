@@ -41,3 +41,17 @@ while [[ "$correct_path" == "n" || "$correct_path" == "N" ]]; do
 	read -p "Path to Packet Tracer file (Ex: /home/user/Documents/PacketTracer_9_0_0.deb): " packet_tracer_path
 	read -p "Is the file in the correct path? [y/n]: " correct_path
 done
+echo
+echo
+wait 2
+#Required Dependencies and Library Setup
+sudo dnf config-manager --set-enabled crb && sudo dnf install -y epel-release alien fuse3 fuse-overlayfs fuse fuse-libs mesa-libGL mesa-libGLU mesa-libEGL libglvnd-opengl qt5-qtmultimedia qt5-qtlocation qt5-qtscript qt5-qtbase qt5-qtx11extras qt5-qttools
+
+echo -e "${yellow} Perfect, its almost finished, now, alien is working and creating the .rpm file!"
+sudo alien --to-rpm $packet_tracer_path ./
+echo
+echo
+echo -e "${cian} Packet Tracer is installing ..."
+sudo dnf install ./PacketTracer-9.0-2.x86_64.rpm -y
+echo
+echo -e "${green} Packet Tracer 9.0.0 is installed! Now, open it with the command 'packettracer'"
